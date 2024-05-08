@@ -1,0 +1,42 @@
+﻿@model ViewModelVM
+
+@* @model List<Country> *@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<label asp-for="Country.CountryName" class="ms-2"></label>
+<select asp-for="Country.Id" asp-items="@Model.CountryList" class="form-select border-0 shadow">
+    <option value="">Select Country</option>
+</select>
+
+<br />
+<br />
+
+@*     <select id="Countries" name="CountryId">
+        <option disabled value="">Select Country</option>
+        @foreach (var country in Model)
+        {
+            <option value="@country.Id">@country.CountryName</option>
+        }
+    </select> *@
+
+<select id="States" name="StateId" class="form-select border-0 shadow">
+    <option value="">Select State</option>
+</select>
+<br />
+<br />
+
+<select id="Cities" name="CityId" class="form-select border-0 shadow">
+    <option value="">Select City</option>
+</select>
+
+@section Scripts {
+    <script src="~/js/Home.js"></script>
+}
