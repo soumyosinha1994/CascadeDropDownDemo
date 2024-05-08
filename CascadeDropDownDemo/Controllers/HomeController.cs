@@ -27,7 +27,7 @@ namespace CascadeDropDownDemo.Controllers
                     Text = u.CountryName,
                     Value = u.Id.ToString()
                 }),
-                Country = new()
+                Country = new(),State=new(),City=new()
             };
            
             return View(viewModelVM);

@@ -26,13 +26,13 @@
             <option value="@country.Id">@country.CountryName</option>
         }
     </select> *@
-
+<label asp-for="State.StateName" class="ms-2"></label>
 <select id="States" name="StateId" class="form-select border-0 shadow">
     <option value="">Select State</option>
 </select>
 <br />
 <br />
-
+<label asp-for="City.CityName" class="ms-2"></label>
 <select id="Cities" name="CityId" class="form-select border-0 shadow">
     <option value="">Select City</option>
 </select>

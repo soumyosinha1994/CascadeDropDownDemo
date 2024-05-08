@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CascadeDropDownDemo.Models
@@ -7,6 +8,7 @@ namespace CascadeDropDownDemo.Models
     {
         [Key]
         public int Id { get; set; }
+        [DisplayName("State Name")]
         public string StateName { get; set; }
         public int CountryId { get; set; }
         [ForeignKey("CountryId")]
